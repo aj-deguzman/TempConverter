@@ -18,7 +18,7 @@ public class TempConverterActivity extends AppCompatActivity implements TextView
     private TextView celsiusConverted;
 
     //Create String placeholder
-    private String celValue = celsiusConverted.getText().toString();
+    private String celValue;
 
     //Define shared preference object
     private SharedPreferences savedValues;
@@ -40,6 +40,9 @@ public class TempConverterActivity extends AppCompatActivity implements TextView
     }
 
     public void calculateAndDisplay(){
+        //Add value to place holder
+        celValue = celsiusConverted.getText().toString();
+
         //Get user input for fahrenheitInput
         String userInputString = fahrenheitInput.getText().toString();
 
